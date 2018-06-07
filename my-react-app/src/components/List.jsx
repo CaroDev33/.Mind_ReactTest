@@ -19,12 +19,12 @@ class List extends Component {
             }) 
         }, 3000);
     }
-    
+
     render() { 
         let display;
 
         if (this.props.card) {
-            let match = new RegExp(this.props.card, "i");
+            let match = new RegExp('^'+this.props.card, "i");
             display = fileList.filter( card => match.test( card.username ) )
         } else {
             display = fileList
@@ -35,7 +35,7 @@ class List extends Component {
                 {!this.state.wait && <img src={Loader} className="App-loader" alt="loader"/>}
                     {this.state.wait && display.map(image => (   
                      <div className ="listgrid">
-                        <img src = {image.picture} />   
+                        <img src = {image.picture} alt={image.username} />   
                         <p key={image.id}> {image.username} </p>
                      </div>
                     )

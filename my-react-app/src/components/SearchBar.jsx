@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './SearchBar.css';
-import filelist from '../file.json';
 
 class SearchBar extends Component {
         state = {

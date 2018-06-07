@@ -6,7 +6,7 @@ import List from './components/List';
 
 class App extends Component {
   state = {
-    card: "",
+    card: '',
   }
 
   updateCard = (card) => (
